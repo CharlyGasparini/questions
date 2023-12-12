@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@100;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color-1: aliceblue;
+    --bg-color-2: whitesmoke;
+    --primary-color: darkgoldenrod;
+    --secondary-color: royalblue;
+    --shadow: 2px 2px 5px rgba(50, 50, 50, 0.7);
+    --transition: all 0.3s linear normal;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+button {
+    color: var(--primary-color);
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    transition: var(--transition);
+    cursor: pointer;
+    padding: 2px;
+
+    &:hover {
+        transform: rotate(90deg);
+    }
+}
+
+
+body {
+    background: var(--bg-color-1);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.question {
+    width: 90vw;
+    max-width: 600px;
+    background: var(--bg-color-2);
+    margin: 2rem;
+    box-shadow: var(--shadow);
+    border-radius: 0.5rem;
+
+}
+
+.question__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.question__title > p {
+    letter-spacing: 2px;
+    margin-right: 1rem;
+}
+
+.question__btn {
+    font-size: 1.5rem;
+}
+
+.question__btn--minus {
+    display: none;
+}
+
+.show-text .question__btn--minus {
+    display: inline;
+}
+
+.show-text .question__btn--plus {
+display: none;
+}
+
+.question__answer {
+    padding: 1rem;
+    font-size: 0.8rem;
+    text-align: justify;
+    line-height: 20px;
+    position: relative;
+    display: none; 
+}
+
+.show-text .question__answer {
+    display: block;
+}
+
+.question__answer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 90%;
+    margin: auto;
+    border-top: 2px solid silver;
+}
+
+
+
